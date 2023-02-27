@@ -1,7 +1,5 @@
 from django.db import models
 import requests
-import requests
-import requests
 
 
 class Blog(models.Model):
@@ -17,34 +15,34 @@ if response.status_code == 200:
     blogs = response.json()
     print(blogs)
 else:
-    print("Ошибка при получении списка блогов")
+    print("Ошибка")
     var = [
         {
             "id": 1,
-            "title": "Blog 1 1",
-            "description": "Blog 2 2",
-            "owner": "Blog 3 3"
+            "title": "Новый блог",
+            "description": "еще новый блог",
+            "owner": "Tobyl Sanat"
         },
         {
             "id": 2,
-            "title": "Blog 1 1 1",
-            "description": "Blog 2 2 2",
-            "owner": "Blog 3 3 3"
+            "title": "Новый блог",
+            "description": "еще новый блог",
+            "owner": "Tobyl Sanat"
         },
         {
             "id": 3,
-            "title": "Blog 1",
-            "description": "Blog 2",
-            "owner": "Blog 3"
+            "title": "Новый блог",
+            "description": "еще новый блог",
+            "owner": "Tobyl Sanat"
         }
     ]
 
 url = "http://yourwebsite.com/api/blogs"
 
 new_blog = {
-    "title": "Blog 1",
-    "description": "Blog 2",
-    "owner": "Blog 3"
+    "title": "Новый блог",
+    "description": "еще новый блог",
+    "owner": "Tobyl Sanat"
 }
 
 response = requests.post(url, json=new_blog)
@@ -53,12 +51,12 @@ if response.status_code == 201:
     created_blog = response.json()
     print(created_blog)
 else:
-    print("Ошибка")
+    print("Ошибка при создании блога")
 var = {
     "id": 4,
-    "title": "Blog 1",
-    "description": "Blog 2",
-    "owner": "Blog 3"
+    "title": "Новый блог",
+    "description": "еще новый блог",
+    "owner": "Tobyl Sanat"
 }
 
 url = "http://yourwebsite.com/api/blogs/4"
@@ -72,7 +70,7 @@ else:
     print("Ошибка при получении блога")
     var = {
         "id": 4,
-        "title": "Blog 1",
-        "description": "Blog 2",
-        "owner": "Blog 3"
+        "title": "Новый блог",
+        "description": "еще новый блог",
+        "owner": "Tobyl Sanat"
     }
