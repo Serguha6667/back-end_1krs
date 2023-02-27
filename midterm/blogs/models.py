@@ -2,7 +2,7 @@ from django.db import models
 
 # Create your models here.
 class Bloq (models.Model):
-    name = models. CharField(max_Length=255, nUll=False)
+    title = models. CharField(max_Length=255, nUll=False)
     description = models. CharField (max_length=255, null=True)
     owner = models. CharField(max_Length=255, null=False)
 
