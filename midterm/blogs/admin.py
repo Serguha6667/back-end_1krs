@@ -1,7 +1,5 @@
-from django.urls import path
-from blogs import views
+from django.contrib import admin
+from .models import Blog
+# Register your models here.
 
-urlpatterns = [
-    path('api/blogs', views.blogs_handler),
-    path('api/blogs/<int:pk>', views.blog_handler)
-]
+admin.site.register(Blog)
